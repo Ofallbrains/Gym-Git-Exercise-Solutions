@@ -88,3 +88,68 @@ Deleted branch test (was ef12307).
 ### Exercise 2
 
 ```bash
+
+gymimena@Imenas-iMac Bundle 1 % git add .
+gymimena@Imenas-iMac Bundle 1 % git stash
+Saved working directory and index state WIP on master: 44009cd ex1
+gymimena@Imenas-iMac Bundle 1 % git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+gymimena@Imenas-iMac Bundle 1 % git add .
+gymimena@Imenas-iMac Bundle 1 % git stash
+Saved working directory and index state WIP on master: 44009cd ex1
+gymimena@Imenas-iMac Bundle 1 % git add .
+gymimena@Imenas-iMac Bundle 1 % git stash
+Saved working directory and index state WIP on master: 44009cd ex1
+gymimena@Imenas-iMac Bundle 1 % git stash list
+stash@{0}: WIP on master: 44009cd ex1
+stash@{1}: WIP on master: 44009cd ex1
+stash@{2}: WIP on master: 44009cd ex1
+gymimena@Imenas-iMac Bundle 1 % git stash pop stash@{2}
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+Dropped stash@{2} (c6a472b9c8c14b4cd7b67eaabb2f5c4eae024179)
+gymimena@Imenas-iMac Bundle 1 % git stash pop stash@{1}
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (1117fb3f5ac795fb0234e3dfbc32f12e733d1d4e)
+gymimena@Imenas-iMac Bundle 1 % git commit -m "Stashing"
+[master 355ded6] Stashing
+ 2 files changed, 22 insertions(+)
+ create mode 100644 Bundle 1/about.html
+ create mode 100644 Bundle 1/home.html
+gymimena@Imenas-iMac Bundle 1 % git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 556 bytes | 556.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Ofallbrains/GIT-EXERCISES.git
+   44009cd..355ded6  master -> master
+gymimena@Imenas-iMac Bundle 1 % git stash pop stash@{0} 
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (f4a3b5edd4dda6d4df44fd229569cf8f64f9ef45)
+gymimena@Imenas-iMac Bundle 1 % git reset --hard
+HEAD is now at 355ded6 Stashing
+```
