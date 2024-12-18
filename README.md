@@ -181,3 +181,89 @@ To https://github.com/Ofallbrains/GIT-EXERCISES.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 
  ```
+
+ ### Exercise 2
+
+ ``` bash
+ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 897 bytes | 448.00 KiB/s, done.
+From https://github.com/Ofallbrains/GIT-EXERCISES
+ * branch            main       -> FETCH_HEAD
+   f6a498a..be6d3b8  main       -> origin/main
+Updating f6a498a..be6d3b8
+Fast-forward
+ services.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+gymimena@Imenas-iMac Git-Exercises % git checkout -b  ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+gymimena@Imenas-iMac Git-Exercises % git add .
+gymimena@Imenas-iMac Git-Exercises % git commit -m "Modified changes"
+[ft/service-redesign 45a3393] Modified changes
+ 1 file changed, 1 insertion(+)
+gymimena@Imenas-iMac Git-Exercises % git push origin ft/service-redesign 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 350 bytes | 350.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Ofallbrains/GIT-EXERCISES/pull/new/ft/service-redesign
+remote: 
+To https://github.com/Ofallbrains/GIT-EXERCISES.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+gymimena@Imenas-iMac Git-Exercises % git checkout main
+Switched to branch 'main'
+gymimena@Imenas-iMac Git-Exercises % git add .
+gymimena@Imenas-iMac Git-Exercises % git commit -m "changes"
+[main c240672] changes
+ 1 file changed, 1 insertion(+)
+gymimena@Imenas-iMac Git-Exercises % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ofallbrains/GIT-EXERCISES.git
+   be6d3b8..c240672  main -> main
+gymimena@Imenas-iMac Git-Exercises % git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+git diff main..ft/service-redesign
+gymimena@Imenas-iMac Git-Exercises % git diff main..ft/service-redesign
+diff --git a/services.html b/services.html
+index 4835ab8..67918b8 100644
+--- a/services.html
++++ b/services.html
+@@ -7,6 +7,6 @@
+ </head>
+ <body>
+     <h1>Welcome to our services page</h1>
+-    <p>services</p>
++    <p>These are our services:</p>
+ </body>
+ </html>
+\ No newline at end of file
+gymimena@Imenas-iMac Git-Exercises % git checkout main
+Switched to branch 'main'
+gymimena@Imenas-iMac Git-Exercises % git merge ft/service-redesign
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+gymimena@Imenas-iMac Git-Exercises % git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 360.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ofallbrains/GIT-EXERCISES.git
+   c240672..97b113c  main -> main
