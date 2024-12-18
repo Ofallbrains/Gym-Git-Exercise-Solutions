@@ -153,3 +153,31 @@ Dropped stash@{0} (f4a3b5edd4dda6d4df44fd229569cf8f64f9ef45)
 gymimena@Imenas-iMac Bundle 1 % git reset --hard
 HEAD is now at 355ded6 Stashing
 ```
+
+## Bundle 2
+
+### Exercise1
+
+``` bash
+gymimena@Imenas-iMac Git-Exercises % git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+gymimena@Imenas-iMac Git-Exercises % git add .
+gymimena@Imenas-iMac Git-Exercises % git commit -m "Changes made"
+[ft/bundle-2 a99418d] Changes made
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+gymimena@Imenas-iMac Git-Exercises % git push origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 442 bytes | 442.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Ofallbrains/GIT-EXERCISES/pull/new/ft/bundle-2
+remote: 
+To https://github.com/Ofallbrains/GIT-EXERCISES.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+
+ ```
