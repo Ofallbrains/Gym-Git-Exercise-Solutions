@@ -790,7 +790,48 @@ To https://github.com/Ofallbrains/Git-Exercises.git
  ### Bundle 5
 
  ## Exercise 1
+``` bash
 
  https://ofallbrains.github.io/Git-Exercises/
  https://github.com/Ofallbrains/Git-Exercises
+```
+
+## Exercise 2
+``` bash
+
+https://github.com/Ofallbrains/git-cafe-exercise
+gymimena@Imenas-iMac Git % ls     
+Ex1.html        faq.html        index.html      team.html
+contact.html    footer.html     services.html
+gymimena@Imenas-iMac Git % cd ..
+gymimena@Imenas-iMac Documents % git clone https://github.com/Ofallbrains/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 677.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+gymimena@Imenas-iMac git-cafe-exercise % git add .
+gymimena@Imenas-iMac git-cafe-exercise % git commit -m "changed text welcome to our place to welcome to our restaurant"
+[main f23e4d2] changed text welcome to our place to welcome to our restaurant
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymimena@Imenas-iMac git-cafe-exercise % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 337.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ofallbrains/git-cafe-exercise.git
+   d1d3f9c..f23e4d2  main -> main
+
+https://github.com/TheGymRwanda/git-cafe-exercise/pull/450 //Created pull request
+
+   ```
+
+### Bundle 6
+
+## Exercise 1
 
