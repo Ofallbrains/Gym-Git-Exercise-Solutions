@@ -865,4 +865,33 @@ https://github.com/TheGymRwanda/git-cafe-exercise/pull/451
 
 ## Exercise 2
 
+``` bash
+gymimena@Imenas-iMac git-cafe-exercise % git checkout -b fx/bug
+Switched to a new branch 'fx/bug'
+gymimena@Imenas-iMac git-cafe-exercise % git add .
+gymimena@Imenas-iMac git-cafe-exercise % git commit -m "Changed title of index4 to Contact"
+[fx/bug 21002b7] Changed title of index4 to Contact
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymimena@Imenas-iMac git-cafe-exercise % git push origin fx/bug
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'fx/bug' on GitHub by visiting:
+remote:      https://github.com/Ofallbrains/git-cafe-exercise/pull/new/fx/bug
+remote: 
+To https://github.com/Ofallbrains/git-cafe-exercise.git
+ * [new branch]      fx/bug -> fx/bug
 
+ https://github.com/TheGymRwanda/git-cafe-exercise/pull/452
+
+ ```
+
+ ## Exercise 3
+
+ ``` bash
+ 
