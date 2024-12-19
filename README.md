@@ -790,3 +790,7 @@ To https://github.com/Ofallbrains/Git-Exercises.git
  ### Bundle 5
 
  ## Exercise 1
+
+ https://ofallbrains.github.io/Git-Exercises/
+ https://github.com/Ofallbrains/Git-Exercises
+
