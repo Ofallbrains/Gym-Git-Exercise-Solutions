@@ -463,3 +463,99 @@ Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/Ofallbrains/Git-Exercises.git
    af5f541..39f69d2  ft/faq-page -> ft/faq-page
+   ```
+
+   ### Exercise 2
+
+   ``` bash
+   gymimena@Imenas-iMac Git % git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+gymimena@Imenas-iMac Git % git branch ft/home-page-redesign
+gymimena@Imenas-iMac Git % git checkout main
+Switched to branch 'main'
+gymimena@Imenas-iMac Git % git add --all
+gymimena@Imenas-iMac Git % git commit -m "changes to contact"
+[main 6b3d3d9] changes to contact
+ 1 file changed, 1 insertion(+)
+gymimena@Imenas-iMac Git % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 319 bytes | 319.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ofallbrains/Git-Exercises.git
+   cdb42ab..6b3d3d9  main -> main
+gymimena@Imenas-iMac Git % git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+gymimena@Imenas-iMac Git % git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+gymimena@Imenas-iMac Git % git log
+commit 39f69d24ca9f0576a002d9b2db310213f7fadb17 (HEAD -> ft/home-page-redesign, origin/ft/faq-page, ft/faq-page)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Dec 18 16:25:57 2024 +0200
+
+    reverted
+
+commit af5f541f8871b68e43965b46cac41db0f6f74de1
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Dec 18 16:23:50 2024 +0200
+
+    faq page
+
+commit 1781dd2583ddd1665707d8f215bbf0764c084adf (origin/ft/contact-page, ft/contact-page)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Dec 18 16:21:24 2024 +0200
+
+    CONTACT PAGE
+
+commit 7ea35a99e03e6642587e9af722b5bc61cebc33ec
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Dec 18 16:14:29 2024 +0200
+gymimena@Imenas-iMac Git % git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+gymimena@Imenas-iMac Git % git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+gymimena@Imenas-iMac Git % git log
+commit 6b3d3d968f8c4b887932eb3b359073aa55922d68 (HEAD -> ft/home-page-redesign, origin/main, main)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Dec 18 16:38:39 2024 +0200
+
+    changes to contact
+
+commit cdb42ab9464169c85d349904ceed1f9cb3716209
+Merge: 1ab61fb 39f69d2
+Author: Uwamwezi Denyse <ofallbrains@gmail.com>
+Date:   Wed Dec 18 16:27:31 2024 +0200
+
+    Merge pull request #4 from Ofallbrains/ft/faq-page
+    
+    Ft/faq page
+
+commit 1ab61fbabae6fea9380efe458d960e86d13aa02d
+Merge: 9f6e864 1781dd2
+Author: Uwamwezi Denyse <ofallbrains@gmail.com>
+Date:   Wed Dec 18 16:27:13 2024 +0200
+
+    Merge pull request #3 from Ofallbrains/ft/contact-page
+gymimena@Imenas-iMac Git % git add .
+gymimena@Imenas-iMac Git % git commit -m "all"
+[ft/home-page-redesign 4a43218] all
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+gymimena@Imenas-iMac Git % git push origin ft/home-page-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/Ofallbrains/Git-Exercises/pull/new/ft/home-page-redesign
+remote: 
+To https://github.com/Ofallbrains/Git-Exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
