@@ -567,3 +567,64 @@ To https://github.com/Ofallbrains/Git-Exercises.git
 ## Exercise 1
 
 ``` bash 
+gymimena@Imenas-iMac Git % git checkout main
+Switched to branch 'main'
+gymimena@Imenas-iMac Git % git remote git-copy https://github.com/Ofallbrains/Another-git-repo.git
+error: unknown subcommand: `git-copy'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+gymimena@Imenas-iMac Git % git remote add git-copy https://github.com/Ofallbrains/Another-git-repo.git
+gymimena@Imenas-iMac Git % git add .
+gymimena@Imenas-iMac Git % git commit -m "Changes to the contact"
+[main 869895d] Changes to the contact
+ 1 file changed, 1 insertion(+)
+gymimena@Imenas-iMac Git % git push origin
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+gymimena@Imenas-iMac Git % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 334 bytes | 334.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ofallbrains/Git-Exercises.git
+   a9b0c27..869895d  main -> main
+gymimena@Imenas-iMac Git % git push git-copy
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (42/42), 7.31 KiB | 7.31 MiB/s, done.
+Total 42 (delta 21), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (21/21), done.
+To https://github.com/Ofallbrains/Another-git-repo.git
+ * [new branch]      main -> main
+
+ ```
+
+ ## Exercise 2
+
+ ``` bash
+ 
