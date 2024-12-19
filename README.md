@@ -627,4 +627,166 @@ To https://github.com/Ofallbrains/Another-git-repo.git
  ## Exercise 2
 
  ``` bash
- 
+ gymimena@Imenas-iMac Git % git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+gymimena@Imenas-iMac Git % git add --all
+gymimena@Imenas-iMac Git % git commit -m "created footer "
+[ft/footer e1bbeff] created footer
+ 1 file changed, 11 insertions(+)
+ create mode 100644 footer.html
+gymimena@Imenas-iMac Git % git add .
+gymimena@Imenas-iMac Git % git commit -m "Updated footer"
+[ft/footer 63e0c5f] Updated footer
+ 1 file changed, 1 insertion(+)
+gymimena@Imenas-iMac Git % git push origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 712 bytes | 712.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Ofallbrains/Git-Exercises/pull/new/ft/footer
+remote: 
+To https://github.com/Ofallbrains/Git-Exercises.git
+ * [new branch]      ft/footer -> ft/footer
+ gymimena@Imenas-iMac Git % git checkout main
+Switched to branch 'main'
+gymimena@Imenas-iMac Git % git branch ft/squashing
+gymimena@Imenas-iMac Git % git checkout ft/squashing
+Switched to branch 'ft/squashing'
+gymimena@Imenas-iMac Git % git merge --squash ft/footer
+Updating 869895d..63e0c5f
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+gymimena@Imenas-iMac Git % git log
+commit 869895d5cac275339a9ea482013be76cad01b6e1 (HEAD -> ft/squashing, origin/main, git-copy/main, main)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Thu Dec 19 11:42:28 2024 +0200
+
+    Changes to the contact
+
+commit a9b0c27414934d2742f8d87f000b706f1db46d46
+Merge: deb8dab 7179292
+Author: Uwamwezi Denyse <ofallbrains@gmail.com>
+Date:   Thu Dec 19 10:08:58 2024 +0200
+
+    Merge pull request #2 from Ofallbrains/ft/team-page
+    
+    Created team page
+
+commit deb8dab0883bb4198e11358d5add7eca0bb41224
+Merge: 6b3d3d9 4a43218
+Author: Uwamwezi Denyse <ofallbrains@gmail.com>
+Date:   Thu Dec 19 10:08:16 2024 +0200
+
+gymimena@Imenas-iMac Git % git checkout ft/footer
+Switched to branch 'ft/footer'
+gymimena@Imenas-iMac Git % git log
+commit 63e0c5fbff05bf0f79877d7829d0a19b0440a5c5 (HEAD -> ft/footer, origin/ft/footer)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Thu Dec 19 11:50:34 2024 +0200
+
+    Updated footer
+
+commit e1bbeffe7861f99809e7882bc1f0473fa3885138
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Thu Dec 19 11:50:14 2024 +0200
+
+    created footer
+
+commit 869895d5cac275339a9ea482013be76cad01b6e1 (origin/main, git-copy/main, main, ft/squashing)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Thu Dec 19 11:42:28 2024 +0200
+
+    Changes to the contact
+
+commit a9b0c27414934d2742f8d87f000b706f1db46d46
+Merge: deb8dab 7179292
+gymimena@Imenas-iMac Git % 
+gymimena@Imenas-iMac Git % git checkout ft/squashing
+Switched to branch 'ft/squashing'
+gymimena@Imenas-iMac Git % git status
+On branch ft/squashing
+nothing to commit, working tree clean
+gymimena@Imenas-iMac Git % git log
+commit 869895d5cac275339a9ea482013be76cad01b6e1 (HEAD -> ft/squashing, origin/main, git-copy/main, main)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Thu Dec 19 11:42:28 2024 +0200
+
+    Changes to the contact
+
+commit a9b0c27414934d2742f8d87f000b706f1db46d46
+Merge: deb8dab 7179292
+Author: Uwamwezi Denyse <ofallbrains@gmail.com>
+Date:   Thu Dec 19 10:08:58 2024 +0200
+
+    Merge pull request #2 from Ofallbrains/ft/team-page
+    
+    Created team page
+
+commit deb8dab0883bb4198e11358d5add7eca0bb41224
+Merge: 6b3d3d9 4a43218
+Author: Uwamwezi Denyse <ofallbrains@gmail.com>
+Date:   Thu Dec 19 10:08:16 2024 +0200
+
+gymimena@Imenas-iMac Git % 
+gymimena@Imenas-iMac Git % git commit -m 'footer changes squashing'
+On branch ft/squashing
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        footer.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+gymimena@Imenas-iMac Git % git add .
+gymimena@Imenas-iMac Git % git commit -m 'footer changes squashing'
+[ft/squashing 69996fc] footer changes squashing
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+gymimena@Imenas-iMac Git % git log
+commit 69996fc7a2dfa3785dd7e779cd15f66cccced4f0 (HEAD -> ft/squashing)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Thu Dec 19 12:05:03 2024 +0200
+
+    footer changes squashing
+
+commit 869895d5cac275339a9ea482013be76cad01b6e1 (origin/main, git-copy/main, main)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Thu Dec 19 11:42:28 2024 +0200
+
+    Changes to the contact
+
+commit a9b0c27414934d2742f8d87f000b706f1db46d46
+Merge: deb8dab 7179292
+Author: Uwamwezi Denyse <ofallbrains@gmail.com>
+Date:   Thu Dec 19 10:08:58 2024 +0200
+
+    Merge pull request #2 from Ofallbrains/ft/team-page
+    
+    Created team page
+
+gymimena@Imenas-iMac Git % git push origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 465 bytes | 465.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Ofallbrains/Git-Exercises/pull/new/ft/squashing
+remote: 
+To https://github.com/Ofallbrains/Git-Exercises.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+ ```
+
+ ### Bundle 5
+
+ ## Exercise 1
