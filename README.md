@@ -1000,3 +1000,32 @@ Date:   Wed Feb 26 10:50:04 2025 +0200
 gymihumure@Ihumures-iMac Git_Advanced-Exercises % 
 
 ```
+
+## 3
+``` bash
+gymihumure@Ihumures-iMac Git_Advanced-Exercises % git rebase -i --root
+[detached HEAD 6cfd506] chore: Create initial and second file
+ Date: Wed Feb 26 10:50:04 2025 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+gymihumure@Ihumures-iMac Git_Advanced-Exercises % git log
+commit f3d24b38e72e9598665d1dddb8732b0450b50043 (HEAD -> main)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:55:49 2025 +0200
+
+    Added the fourth file
+
+commit e0fe422680dd1ad7dc597c7397724c377de37a0d
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:50:04 2025 +0200
+
+    chore: Create third and fourth files
+
+commit 6cfd506e8138b5ee480f0c26f28a2d7db3b698f3
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:50:04 2025 +0200
+
+    chore: Create initial and second file
+    ```
