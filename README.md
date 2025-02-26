@@ -911,3 +911,92 @@ To https://github.com/Ofallbrains/git-cafe-exercise.git
 
 ```
 
+
+
+## challenges
+
+## 1
+``` bash
+gymihumure@Ihumures-iMac Git_Advanced-Exercises % touch test{1..4}.md
+gymihumure@Ihumures-iMac Git_Advanced-Exercises %                      
+git add test1.md && git commit -m "chore: Create initial file"
+git add test2.md && git commit -m "chore: Create another file"
+git add test3.md && git commit -m "chore: Create third and fourth files"
+[main (root-commit) 9c1f7b3] chore: Create initial file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+[main 41e3577] chore: Create another file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+[main e4ecf2e] chore: Create third and fourth files
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+gymihumure@Ihumures-iMac Git_Advanced-Exercises % git status
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+gymihumure@Ihumures-iMac Git_Advanced-Exercises % git log
+commit e4ecf2e1bf37027b0a73c85d45063ee7838601fe (HEAD -> main)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:50:04 2025 +0200
+
+    chore: Create third and fourth files
+
+commit 41e3577b6839bb0c510fffbb5249c35b8b74f5fc
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:50:04 2025 +0200
+
+    chore: Create another file
+
+commit 9c1f7b3d4d77d8087918ba84f64a260ccf73e21e
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:50:04 2025 +0200
+
+    chore: Create initial file
+gymihumure@Ihumures-iMac Git_Advanced-Exercises % git add test4.md && git commit -m "Added the fourth file"
+[main a1b80b2] Added the fourth file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test4.md
+
+ ```
+ ## 2
+ ``` bash
+ gymihumure@Ihumures-iMac Git_Advanced-Exercises % git rebase -i HEAD~3      
+[detached HEAD 29262f2] chore: Create second file
+ Date: Wed Feb 26 10:50:04 2025 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+gymihumure@Ihumures-iMac Git_Advanced-Exercises % git log
+commit f61be36c5d8a9f071e6f7e0cf711914346acecdc (HEAD -> main)
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:55:49 2025 +0200
+
+    Added the fourth file
+
+commit 44cfd9e1b0ab70b42af7f4fd6a0f90628aa68d9a
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:50:04 2025 +0200
+
+    chore: Create third and fourth files
+
+commit 29262f2abacbda811fa403939473d0ab9300624d
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:50:04 2025 +0200
+
+    chore: Create second file
+
+commit 9c1f7b3d4d77d8087918ba84f64a260ccf73e21e
+Author: Ofallbrains <ofallbrains@gmail.com>
+Date:   Wed Feb 26 10:50:04 2025 +0200
+
+    chore: Create initial file
+gymihumure@Ihumures-iMac Git_Advanced-Exercises % 
+
+```
